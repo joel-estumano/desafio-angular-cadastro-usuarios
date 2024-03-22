@@ -1,0 +1,37 @@
+<nav #navbar class="navbar navbar-expand-lg sticky-top d-block bg-white py-1" data-bs-theme="light">
+    <div class="container-fluid px-3 px-lg-4">
+        <button #navbartoggler class="navbar-toggler border-0 shadow-none px-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div #navCollapse class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                <li class="nav-item mx-2 mx-lg-1 d-flex">
+                    <a class="nav-link" (click)="
+              navCollapse.classList.contains('show') && navbartoggler.click()
+            " routerLink="" routerLinkActive="active"><i class="bi bi-book"></i></a>
+                </li>
+                <li class="nav-item mx-2 mx-lg-1 d-flex">
+                    <a class="nav-link" (click)="
+              navCollapse.classList.contains('show') && navbartoggler.click()
+            " routerLink="" routerLinkActive="active"><i class="bi bi-gear"></i></a>
+                </li>
+                <li class="nav-item mx-2 mx-lg-1 d-flex">
+                    <a class="nav-link" (click)="
+              navCollapse.classList.contains('show') && navbartoggler.click()
+            " routerLink="" routerLinkActive="active">
+                        <div class="position-relative">
+                            <i class="bi bi-bell"></i>
+                            <i class="position-absolute start-100 translate-middle badge bi bi-dot text-body fs-2 p-0"
+                                [ngStyle]="{ top: '6px'}">
+                                <span class="visually-hidden">Nova notificação</span> </i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet />
+<app-notificacao />
